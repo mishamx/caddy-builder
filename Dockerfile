@@ -34,8 +34,6 @@ COPY --from=builder /go/bin/caddy /usr/bin/caddy
 # list plugins
 RUN /usr/bin/caddy -plugins
 
-# static files volume
-VOLUME ["/www"]
 WORKDIR /www
 
 COPY Caddyfile /etc/caddy/Caddyfile
